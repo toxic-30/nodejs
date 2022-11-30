@@ -1,0 +1,28 @@
+<%-include('common/header');-%>
+<%-include('common/loginnav');-%>
+<h3 class="text-center">Total <%=studentResult.length%> students</h3> 
+<button type="button" onclick="location.href='addresult';"
+ class="btn btn-success" style="margin-left:100px">
+  Add Result</button>
+<form action="/" method="POST">
+<div class="container" Style="width:60%; margin-top:-100px">    
+    <table class="table table-bordered" style="margin-top: 100px;">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">RollNo</th>
+          <th scope="col">Name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Score</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="table_body">
+        <%-include('common/table');-%>
+      </tbody>
+    </table>
+    
+  </div>
+</form>
+  
+<%-include('common/footer');-%>
+  

@@ -1,0 +1,13 @@
+<%for(var i=0;i < studentResult.length;i++){%>
+    <tr>
+    <td><%=studentResult[i].RollNo %></td>
+    <td><%=studentResult[i].Name %></td>
+    <td><%=studentResult[i].Date %></td>
+    <td><%=studentResult[i].Score %></td>
+     <td><a href="/updateresult?RollNo=<%=studentResult[i].RollNo%>" class="btn-border-shadow-update">
+       <span class="text-gradient"><i class="fa-solid fa-pen"></i></span></a>
+       <a class="btn-border-shadow-delete" id="unique" data-id=<%=studentResult[i].RollNo %>>
+       <span class="text-gradient"><i id="unique1" style="margin-left: 15px;"class="fa-solid fa-trash"></i></span></a>
+     </td>
+   </tr>
+   <%}%>
